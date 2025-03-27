@@ -6,15 +6,26 @@ Read more: https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts
 if (!window._flutter) {
   window._flutter = {};
 }
-_flutter.buildConfig = {"engineRevision":"e672b006cb34c921db85b8e2f482ed3144a4574b","builds":[{"compileTarget":"dart2js","renderer":"canvaskit","mainJsPath":"main.dart.js"}]};
+_flutter.buildConfig = {"engineRevision":"82bd5b7209295a5b7ff8cae0df96e7870171e3a5","builds":[{"compileTarget":"dart2js","renderer":"canvaskit","mainJsPath":"main.dart.js"}]};
 
 
+var loading = document.querySelector('#loading');
 _flutter.loader.load({
+    config: {
+        renderer: webRenderer
+    },
     serviceWorkerSettings: {
-        serviceWorkerVersion: "550568083",
+        serviceWorkerVersion: "713049676",
     },
     onEntrypointLoaded: async function (engineInitializer) {
+        loading.classList.add('main_done');
         const appRunner = await engineInitializer.initializeEngine({useColorEmoji: useColorEmoji});
+
+        loading.classList.add('init_done');
         await appRunner.runApp();
+
+        window.setTimeout(function () {
+            loading.remove();
+        }, 200);
     }
 });
