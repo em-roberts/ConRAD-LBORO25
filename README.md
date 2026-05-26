@@ -1,5 +1,7 @@
 # Group Research Project - Converting Counts to Dose 
 
-Website: https://em-roberts.github.io/ConRAD-LBORO25/ 
+*Con*verting *RAD*ioactive Counts to Dose
 
-This repository houses the code for launching the webpage using flute. 
+Website hosted on github-pages: [ConRAD-LBORO25](https://em-roberts.github.io/ConRAD-LBORO25/ )
+
+This repository is the generated website from repository [LEDA-Website](https://github.com/em-roberts/LEDA-Website) 
